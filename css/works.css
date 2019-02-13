@@ -1,0 +1,493 @@
+/*
+ * Content styles
+ */
+
+.section-title {
+    font-size: 3em;
+    color: #434753;
+}
+
+@media (min-width: 640px) {
+    .section-title {
+        font-size: 4em;
+    }
+}
+
+#content {
+    position: relative;
+    display: block;
+    top: 0;
+    overflow-y: visible;
+}
+
+#content > div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#content .container {
+    height: 100%;
+}
+
+#about {
+    padding-top: 100px;
+    height: 700px;
+    background: transparent;
+}
+
+.main-description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 180px;
+    z-index: 1;
+    margin: 0;
+    padding: 10px;
+    color: snow;
+    font-size: 2.6em;
+    cursor: default;
+    text-align: justify;
+    background-color: rgba(250, 250, 250, .2);
+    float: left;
+}
+
+#services {
+    background-color: #9acfea;
+}
+
+#service-header {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.slider {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.slider-arrow {
+    vertical-align: middle;
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+    background: url("../img/slider-mouseover.png") no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: .4;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+.slider-arrow:hover {
+    opacity: 1;
+}
+
+.slider-arrow-left {
+    transform: rotate(180deg);
+}
+
+.slider-content {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: 15px 10px;
+    overflow: hidden;
+    width: calc(100% - 110px);
+}
+
+#services .slider-content {
+    height: 500px;
+}
+
+@media (min-width: 640px) {
+    .slider-content {
+        margin: 15px 20px;
+        width: calc(100% - 150px);
+    }
+
+    #services .slider-content {
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider-arrow {
+        width: 60px;
+        height: 100px;
+    }
+
+    .slider-content {
+        width: calc(100% - 200px);
+    }
+
+    #services .slider-content {
+        height: 400px;
+    }
+}
+
+.slider-content ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-item {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.card-left {
+    display: inline-block;
+    position: relative;
+    background: no-repeat center top;
+    background-size: cover;
+    height: 278px;
+    width: 100%;
+}
+
+.card-right {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: calc(100% - 278px);
+    width: 100%;
+    padding: 10px;
+}
+
+@media (min-width: 640px) {
+    .card {
+        width: 450px;
+    }
+
+    .card-left {
+        height: 100%;
+        width: 225px;
+    }
+
+    .card-right {
+        position: absolute;
+        height: 100%;
+        width: 225px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 550px;
+    }
+
+    .card-left {
+        width: 275px;
+    }
+
+    .card-right {
+        width: 275px;
+    }
+    .card-header {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        width: 730px;
+    }
+
+    .card-left {
+        width: 365px;
+    }
+
+    .card-right {
+        width: 365px;
+    }
+}
+
+.card > * {
+    vertical-align: middle;
+}
+
+.card-header {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    line-height: 35px;
+    margin-left: 5px;
+}
+
+.card-content {
+    position: relative;
+    text-align: center;
+    margin-top: 5px;
+    height: calc(100% - 105px);
+    width: 100%;
+    vertical-align: middle;
+    word-break: keep-all;
+    font-size: 13px;
+}
+
+@media (min-width: 640px) {
+    .card-content{
+        margin-top: 20px;
+    }
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 10px;
+    min-height: 30px;
+    width: calc(100% - 20px);
+    text-align: center;
+    vertical-align: bottom;
+}
+.card-footer span {
+    color: navy !important;
+    font-weight: bold;
+}
+
+.slider-footer {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.slider-circle {
+    cursor: default;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background: navy;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+.slider-circle.visible {
+    opacity: .5;
+}
+
+#events {
+    background-color: #b4d0d5;
+    color: #434753;
+    cursor: default;
+}
+
+.events-header {
+    width: 100%;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 55px;
+    margin-bottom: 50px;
+}
+
+#events-title {
+}
+
+.events-description {
+    display: block;
+    font-size: 1.5em;
+}
+
+.events-list {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+}
+
+.events-content {
+    margin-bottom: 20px;
+}
+
+.events-content > * {
+    z-index: 2;
+    min-height: 1.5em;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+}
+
+.events-left {
+    padding-right: 1.5em;
+    text-align: right;
+    width: calc(50% - 23px);
+}
+
+.events-hexagon {
+    top: 5px;
+    width: 40px;
+    height: 40px !important;
+    background: url("../img/history-hexagon.png") no-repeat center center;
+    background-size: 90%;
+}
+
+.events-right {
+    padding-left: 1.5em;
+    width: calc(50% - 25px);
+}
+
+.event-item-box {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.event-item-box > * {
+    display: inline-block;
+}
+
+.event-item-title {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.event-item-info {
+    max-width: 400px;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 2px #9ea2a9 solid;
+    margin-bottom: 15px;
+}
+
+.event-item-participants {
+    min-width: calc(100% - 70px);
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.event-item-time {
+    width: 75px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.events-right .event-item-title, .events-right .event-item-participants {
+    text-align: left;
+    float: left;
+}
+
+.events-right .event-item-time {
+    float: right;
+    text-align: right;
+}
+
+.events-left .event-item-title, .events-left .event-item-participants {
+    text-align: right;
+    float: right;
+}
+
+.events-left .event-item-time {
+    float: left;
+    text-align: left;
+}
+
+#events-line {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top: 270px;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: calc(100% - 340px);
+    background-color: #737a8a;
+}
+
+#achievements {
+    background-color: white;
+}
+
+#achievements-header {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#achievements .slider-content {
+    background: url("../img/achievements-laurel.png") no-repeat center center;
+    background-size: cover;
+}
+
+#achievements .slider-content:before {
+    content: "";
+    display: block;
+    position: relative;
+    padding-bottom: 76%;
+}
+
+#achievements .slider-item {
+    vertical-align: middle;
+}
+
+.achievements-item {
+    margin: 0 25%;
+    height: 65%;
+    width: 50%;
+    overflow-y: auto;
+}
+
+.achievement-name {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 5px auto;
+}
+
+.achievement-content {
+    font-size: .7em;
+    margin: 0;
+}
+
+.achievement-result {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (min-width: 480px) {
+    .achievements-item {
+        margin: 10% 25%;
+    }
+}
+
+@media (min-width: 640px) {
+    .achievement-name {
+        font-size: 2.5em;
+        margin: 20px auto;
+    }
+
+    .achievement-content {
+        font-size: 1.2em;
+        margin: 25px auto;
+    }
+
+    .achievement-result {
+        font-size: 3.5em;
+        margin-top: 40px;
+    }
+}

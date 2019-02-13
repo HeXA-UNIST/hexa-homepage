@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="private, max-age=432000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackers' eXciting Academy - HeXA</title>
+    <script src="lib/js/jquery-2.2.0.min.js"></script>
+    <script src="lib/js/jquery.pjax.js"></script>
+    <script src="js/card-depth.js"></script>
+    <script src="js/hexa.js"></script>
+    <link rel="stylesheet" href="css/hexa.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+<body>
+
+<section id="header" class="header">
+    <div class="container">
+        <div id="header-logo-box">
+            <div class="header-hexa-logo"></div>
+            <span class="header-page-label"></span>
+        </div>
+        <ul id="header-menu">
+        </ul>
+    </div>
+</section>
+
+<section id="content-body">
+    <link rel="stylesheet" href="css/main.css">
+    <div id="main" class="display-table">
+        <div class="display-table-cell">
+            <div id="main-menu-box">
+                <ul id="main-menu">
+                    <li class="main-logo main-item animation animation-duration-4">
+                        <div class="hexa-logo"></div>
+                    </li>
+                    <li class="about main-item animation animation-duration-4 animation-move-top">
+                        <div class="hexagon main-item-button opacity-6 animation animation-duration-4">
+                            <input name="url" type="hidden" value="about.html">
+                            <span class="main-item-label">About</span>
+                        </div>
+                    </li>
+                    <li class="apply main-item animation animation-duration-4">
+                        <div class="hexagon red main-item-button opacity-9 animation animation-duration-4">
+                            <input name="redirect" type="hidden" value="http://apply.hexa.pro/">
+                            <span class="main-item-label">Apply</span>
+                        </div>
+                    </li>
+                    <li class="portfolio main-item animation animation-duration-4">
+                        <div class="hexagon main-item-button opacity-6 animation animation-duration-4">
+                            <input name="url" type="hidden" value="works.html">
+                            <span class="main-item-label">Works</span>
+                        </div>
+                    </li>
+                    <li class="ctf main-item animation animation-duration-4">
+                        <div class="hexagon main-item-button opacity-6 animation animation-duration-4">
+                            <input name="redirect" type="hidden" value="http://ctf.hexa.pro/">
+                            <span class="main-item-label">CTF</span>
+                        </div>
+                    </li>
+                    <li class="item5 main-item animation animation-duration-4 inactive">
+                        <div class="hexagon main-item-button opacity-6 animation animation-duration-4">
+                            <!-- <input name="url" type="hidden" value="introduction.html"> -->
+                            <span class="main-item-label">Portal</span>
+                        </div>
+                    </li>
+                    <li class="item6 main-item animation animation-duration-4 disabled">
+                        <div class="hexagon opacity-3 animation animation-duration-4">
+                            <span class="main-item-label"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bubble"></div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(".header-down").removeClass("header-down");
+            $(".scale-0").removeClass("scale-0");
+            $("#footer").hide();
+
+            setCounter("apply", 2017, 8, 27, 18, 0);
+
+            function setCounter(target, year, month, date, hour, min) {
+                var targetElem = $("." + target);
+                var bubble = $(".bubble").hide();
+                var timeLeftForApply, mod;
+                var interval = setInterval(counter, 1000);
+
+                bubble.on("hide", function(){
+                    clearInterval(interval);
+                    bubble.remove();
+                });
+
+                function counter() {
+                    timeLeftForApply = getTimeRemaining();
+                    updateCount(bubble, timeLeftForApply);
+                    mod = timeLeftForApply.total % 1000;
+                    setTimeout(function () {
+                        if (timeLeftForApply.total < 0) {
+                            console.log("No more");
+                            bubble.hide();
+                            targetElem.addClass("inactive");
+                            clearInterval(interval);
+                            return false;
+                        } else {
+                            bubble.show();
+                            alignBubble();
+                        }
+                    }, mod > 0 ? 1000 - mod : 500);
+                }
+
+                function alignBubble() {
+                    var offset = targetElem.offset();
+
+                    bubble.css({
+                        top: offset.top - 70,
+                        left: parseInt(offset.left + targetElem.width() / 2 - bubble.width() / 2 - 1)
+                    });
+                }
+
+                function updateCount(bubble, timeLeft) {
+                    var html;
+                    if (timeLeft.days > 0) {
+                        html = getTimeNumber(timeLeft.days) + " Days " + getTimeNumber(timeLeft.hours) + " Hours";
+                    } else {
+                        html = getTimeNumber(timeLeft.hours) + " Hours "
+                                + getTimeNumber(timeLeft.minutes) + " Minutes "
+                                + getTimeNumber(timeLeft.seconds) + " Seconds";
+                    }
+                    bubble.html(html + " <span style='font-weight: bolder;'>Left!</span>");
+                }
+
+                function getTimeNumber(number) {
+                    return '<span class="count-number">' + number + '</span>'
+                }
+
+                function getTimeRemaining() {
+                    var due = new Date();
+                    due.setFullYear(year);
+                    due.setMonth(month - 1);
+                    due.setDate(date);
+                    due.setHours(hour);
+                    due.setMinutes(min);
+                    due.setSeconds(0);
+                    var t = due.getTime() - Date.now();
+                    var seconds = Math.floor((t / 1000) % 60);
+                    var minutes = Math.floor((t / 1000 / 60) % 60);
+                    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                    return {
+                        'total': t,
+                        'days': days,
+                        'hours': hours,
+                        'minutes': minutes,
+                        'seconds': seconds
+                    };
+                }
+            }
+
+
+            // Main Page
+            var main_items = $(".main-item:not(.main-logo)");
+            main_items.one('click', function () {
+                var self = $(this);
+                if (self.hasClass("disabled") || self.hasClass("inactive")) return;
+                $(".bubble").trigger("hide");
+                var self_index = main_items.index(this);
+                var idx_asc = self_index, idx_desc = self_index;
+                var iter = Math.ceil((main_items.length - 1) / 2) + 1;
+                var interval = 100;
+                for (var i = 0; i < iter + 1; i++) {
+                    if (i < iter) {
+                        if (idx_desc < 0) idx_desc += main_items.length;
+                        if (idx_asc >= main_items.length) idx_asc -= main_items.length;
+                        if (idx_asc == idx_desc) {
+                            menuDisappear(main_items[idx_asc], interval * (iter - i));
+                        } else {
+                            menuDisappear(main_items[idx_asc], interval * (iter - i));
+                            menuDisappear(main_items[idx_desc], interval * (iter - i));
+                        }
+                        idx_asc++;
+                        idx_desc--;
+                    } else {
+                        setTimeout(function () {
+                            $(".main-item .hexa-logo").toggleClass("scale-0");
+                            pageOpen(self);
+                        }, interval * i + 500);
+                    }
+                }
+            });
+
+            function menuDisappear(item, delay) {
+                setTimeout(function () {
+                    $(item).find(".hexagon")
+                            .toggleClass("scale-0");
+                }, delay || 0);
+            }
+
+            function pageOpen(elem) {
+                var label = elem.find("span").text();
+
+                elem = elem.find("input");
+                var type = elem.attr("name");
+                switch (type) {
+                    case "url":
+                        setTitle(label);
+                        $("#header").addClass("header-down");
+                        $("#header-menu").removeAttr("data-target");
+                        setTimeout(function () {
+                            $.pjax({
+                                url: elem.val(),
+                                container: "#content-body",
+                                fragment: "#content-body"
+                            });
+                            $("#footer").show();
+                        }, 400);
+                        return;
+                    case "redirect":
+                        location.href = elem.val();
+                        return;
+                }
+            }
+        });
+    </script>
+</section>
+
+<section id="footer">
+    <div class="container">
+        <div class="footer-up">HeXA</div>
+        <div class="footer-down">Powered by WEB DEVELOP TEAM</div>
+    </div>
+</section>
+
+</body>
+</html>

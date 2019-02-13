@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="private, max-age=432000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackers' eXciting Academy - HeXA</title>
+    <script src="lib/js/jquery-2.2.0.min.js"></script>
+    <script src="lib/js/jquery.pjax.js"></script>
+    <script src="js/card-depth.js"></script>
+    <script src="js/hexa.js"></script>
+    <link rel="stylesheet" href="css/hexa.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+<body>
+
+<section id="header" class="header header-down">
+    <div class="container">
+        <div id="header-logo-box">
+            <div class="header-hexa-logo"></div>
+            <span class="header-page-label"></span>
+        </div>
+        <ul id="header-menu">
+        </ul>
+    </div>
+</section>
+
+<section id="content-body">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/works.css">
+    <!-- Page Content -->
+    <div id="content" class="animation content-open animation-duration-4">
+        <div id="about">
+            <div class="container">
+                <div class="main-description">
+                    Hackers'
+                    eXciting
+                    Academy
+                </div>
+            </div>
+        </div>
+        <div id="services">
+            <div class="container">
+                <div id="service-header" class="section-title">
+                    Services
+                </div>
+                <div class="slider">
+                    <div class="slider-arrow slider-arrow-left"></div>
+                    <div class="slider-content">
+                        <ul>
+                            <li class="slider-item visible">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-bab.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            UNIST 식단정보
+                                        </div>
+                                        <div class="card-content">
+                                            UNIST 기숙사식당 식단정보를 모바일 웹페이지로 제공합니다.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a target="_blank" href="http://bab.hexa.pro">http://bab.hexa.pro</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-unistbus.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            UNIST 버스정보
+                                        </div>
+                                        <div class="card-content">
+                                            UNIST에 들어오고 나가는 버스들의 도착예정시간을 알려주는 서비스. UNIST 정류장에서 나가는 버스, UNIST 학생들이 주로 가는 목적지들에서 학교로 들어오는 버스들의 도착시간을 제공한다.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a target="_blank" href="http://bus.hexa.pro">http://bus.hexa.pro</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-unistbap.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            밥먹기 십오분전 - 유니스트
+                                        </div>
+                                        <div class="card-content">
+                                            학식 배식 시작 15분 전에 식단을 자동으로 올려주는 페이스북 페이지. 좋아요를 누르고 먼저 보기도 함께 설정해두면 좋다.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a target="_blank" href="http://fb.com/unistbap">http://fb.com/unistbap</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-unistalert.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            UNIST 알리미
+                                        </div>
+                                        <div class="card-content">
+                                            Portal에 공지가 올라오면 알림을 보내주는 어플리케이션. iOS와 Android를 지원한다.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a target="_blank"
+                                               href="https://itunes.apple.com/kr/app/unist-allimi/id1022476533?mt=8">
+                                                <img src="img/service-appstore.svg">
+                                            </a>
+                                            <a target="_blank"
+                                               href="https://play.google.com/store/apps/details?id=in.unist.alerts&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                                                <img alt="Get it on Google Play"
+                                                     src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+                                                     width="135px" height="40px"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-unisttime.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            UNIST TimeTable
+                                        </div>
+                                        <div class="card-content">
+                                            수강신청 전 시간표를 미리 짜볼 수 있는 사이트. 구성한 시간표는 이미지로 저장할 수도 있다.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="http://unist.in/time" target="_blank">http://unist.in/time</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-jobdam.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            Job談
+                                        </div>
+                                        <div class="card-content">
+                                            울산 화봉고등학교의 'STEAM 교육 프로그램 운영을 통한 자기주도적 진로설계 능력 신장'을 주제로 한 프로젝트의 일환으로 HeXA와 화봉고등학생이 함께 제작한 어플리케이션. 학생들의 진로설계와 능력신장에 도움을 주기 위해 제작되었다.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a target="_blank"
+                                               href="https://play.google.com/store/apps/details?id=com.steam&hl=ko">
+                                                <img alt="Get it on Google Play"
+                                                     src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+                                                     width="135px" height="40px"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="card" z-default=10 z-hover=30>
+                                    <div class="card-left" style="background-image: url('img/service-jobdamgame.png')">
+                                    </div>
+                                    <div class="card-right">
+                                        <div class="card-header">
+                                            찾JOB
+                                        </div>
+                                        <div class="card-content">
+                                            울산 화봉고등학교 동아리 STEAM PROJECT와 교사연구회, HeXA가 공동으로 개발한 진로설계 게임 어플리케이션.
+                                        </div>
+                                        <div class="card-footer">
+                                            <a target="_blank"
+                                               href="https://play.google.com/store/apps/details?id=silvara.hwabong.jobdamgame&hl=ko">
+                                                <img alt="Get it on Google Play"
+                                                     src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+                                                     width="135px" height="40px"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider-arrow slider-arrow-right"></div>
+                    <div class="slider-footer"></div>
+                </div>
+            </div>
+        </div>
+        <div id="events">
+            <div class="container">
+                <div class="row events-header">
+                    <div id="events-title" class="section-title">Events</div>
+                    <div class="events-description">Seminars & Competitions</div>
+                </div>
+                <div class="events-list">
+                    <!-- 2017 -->
+                    <div class="row events-content">
+                        <div class="events-left">
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    Christmas CTF
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        182팀 중 14위 (김동민, 한동규)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2017. 12.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    고려대 주최 2017 암호경진대회
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        대상(김승회, 김동민, 장동원)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2017. 12.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    HeXA 공개 세미나
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        이재성, 곽희나, 김승호
+                                    </div>
+                                    <div class="event-item-time">
+                                        2017. 11.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    카카오 Code Festival
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        Finalist (김승호)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2017. 9.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    딥러닝기반 강아지 고양이 이미지인식 경진대회
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        대상 (이재성)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2017. 8.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <!-- 2016 -->
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    HeXA 해킹 세미나
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        김동민, 김승회, 문혜진
+                                    </div>
+                                    <div class="event-item-time">
+                                        2016. 4.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    마데이터 스타트업 오디션
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        Finalist (김기환, 김연준, 장동원)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2016. 4.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    angstromCTF 2016
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        492팀 중 84위 (김동민, 장동원)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2016. 4.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    sCTF 2016 Q1
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        780팀 중 99위 (김동민, 장동원)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2016. 4.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2015 -->
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    Christmas CTF
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        11위 (김동민, 우민규, 장동원, 한명균)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2015. 12.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    HeXA 세미나
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        이송이, 유인완, 김동민, 이기웅, 우민규, 장동원
+                                    </div>
+                                    <div class="event-item-time">
+                                        2015. 11.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    HeXA 해킹 세미나
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        황원준, 오정민, 이송이, 이시몬, 한명균
+                                    </div>
+                                    <div class="event-item-time">
+                                        2015. 5.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    "기술, 스타트업, 성공적" 제 1회 헥사톤(HeXATHON)
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        NAVER D2 후원
+                                    </div>
+                                    <div class="event-item-time">
+                                        2015. 4.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <!-- 2014 -->
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 2회 HeXA CTF
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                    </div>
+                                    <div class="event-item-time">
+                                        2014.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    PlaidCTF 2014
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        1100팀 중 136위
+                                    </div>
+                                    <div class="event-item-time">
+                                        2014. 4.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    CODEGATE 2014 예선전
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        283팀 중 17위 (한국팀 중 5위)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2014. 2.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2013 -->
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    2013 Holyshield Hacking Festival
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        1위 - ￦1,000,000
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 11.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 4회 C++ 공개 강의
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants"></div>
+                                    <div class="event-item-time">
+                                        2013. 11.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    Hack.lu 2013 CTF 2013
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        413팀 중 43위 (한국팀 중 1위)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 10.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    2013 대한민국 화이트햇 콘테스트
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        단체전 본선 3위, ￦8,000,000<br>
+                                        (김승회, 김태훈, 조재민, 한충우)
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 9.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    CSAW CTF 2013
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        1387팀 중 103위
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 9.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 3회 C++ 공개 강의
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants"></div>
+                                    <div class="event-item-time">
+                                        2013. 9.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 1회 C++ 튜터링
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants"></div>
+                                    <div class="event-item-time">
+                                        2013. 9.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 1회 HeXA CTF
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants"></div>
+                                    <div class="event-item-time">
+                                        2013. 9.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    DIMVA CTF 2013
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        59팀 중 18위
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 7.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    2013 KISA 해킹방어대회
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        전국 12위
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 6.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left"></div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    Secuinside 2013 예선
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants">
+                                        1083팀 중 35위
+                                    </div>
+                                    <div class="event-item-time">
+                                        2013. 5.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 2회 C++ 공개 강의
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants"></div>
+                                    <div class="event-item-time">
+                                        2013. 5.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <!-- 2012 -->
+                    <div class="row events-content">
+                        <div class="events-left">
+                            <div class="event-item-box">
+                                <div class="event-item-title">
+                                    제 1회 c++ 공개 강의
+                                </div>
+                                <div class="event-item-info">
+                                    <div class="event-item-participants"></div>
+                                    <div class="event-item-time">
+                                        2012. 11.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="events-hexagon"></div>
+                        <div class="events-right"></div>
+                    </div>
+                    <div id="events-line"></div>
+                </div>
+            </div>
+        </div>
+        <div id="achievements">
+            <div id="achievements-header" class="section-title">
+                Achievements
+            </div>
+            <div class="container">
+                <div class="slider">
+                    <div class="slider-arrow slider-arrow-left"></div>
+                    <div class="slider-content">
+                        <ul>
+                            <li class="slider-item visible">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">2017 암호경진대회</div>
+                                    <div class="achievement-content">김승회, 김동민, 장동원</div>
+                                    <div class="achievement-result">대상</div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">딥러닝기반 강아지 고양이<br>이미지인식 경진대회</div>
+                                    <div class="achievement-content">이재성</div>
+                                    <div class="achievement-result">대상</div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">카카오 Code Festival</div>
+                                    <div class="achievement-content">김승호</div>
+                                    <div class="achievement-result">Finalist</div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">마데이터 스타트업 오디션</div>
+                                    <div class="achievement-content">김기환, 김연준, 장동원</div>
+                                    <div class="achievement-result">Finalist</div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">제 2회 슈퍼컴퓨팅 경진대회</div>
+                                    <div class="achievement-content">곽재원</div>
+                                    <div class="achievement-result">최우수상</div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">ISC 14</div>
+                                    <div class="achievement-content">곽재원, 김민규, 김승회, 김태훈, 유인완</div>
+                                    <div class="achievement-result">Finalist</div>
+                                </div>
+                            </li>
+                            <li class="slider-item right">
+                                <div class="achievements-item">
+                                    <div class="achievement-name">ASC 13</div>
+                                    <div class="achievement-content">곽재원, 김태훈</div>
+                                    <div class="achievement-result">Finalist</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider-arrow slider-arrow-right"></div>
+                    <div class="slider-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page specific scripts -->
+    <script>
+        setTitle('Works');
+        registerHeaderMenu(".main-description");
+        $(function () {
+            update();
+            $("#header.header").addClass("header-down");
+
+            slider($("#services"));
+            slider($("#achievements"));
+
+            function slider(root) {
+                setTimeout(initSliderItems, 100);
+                $(window).on("resize", initSliderItems);
+
+                function initSliderItems() {
+                    var sliderItemWidth = root.find(".slider-item").width();
+                    root.find(".slider-item.visible").css("left", 5);
+                    root.find(".slider-item.left").css("left", -sliderItemWidth * 1.05 + 5);
+                    root.find(".slider-item.right").css("left", sliderItemWidth * 1.05 + 5);
+                }
+
+                root.find(".slider-footer").html(
+                        root.find(".slider-item").map(function (i) {
+                            return "<div class='slider-circle' tabindex='" + i + "'></div>";
+                        }).toArray().join('')
+                );
+
+                toggleCircle(root.find(".slider-item.visible"));
+
+                root.find(".slider-arrow").on("click", function (e) {
+                    var sliderItemWidth = root.find(".slider-item").width();
+                    var toBeVisible, toBeInvisible = root.find(".slider-item.visible");
+
+                    if ($(e.target).attr("class").indexOf("left") > -1) {
+                        toBeVisible = toBeInvisible.prev().removeClass("left");
+                        if (toBeVisible.length < 1) {
+                            toBeVisible = root.find(".slider-item").last()
+                                    .css("left", -sliderItemWidth * 1.05 + 5)
+                                    .removeClass("right");
+                        } else if (toBeVisible.hasClass("right")) {
+                            toBeVisible.removeClass("right")
+                                    .css("left", -sliderItemWidth * 1.05 + 5);
+                        }
+                        toBeInvisible.removeClass("visible").addClass("right")
+                                .stop().animate({
+                            left: sliderItemWidth * 1.05 + 5
+                        }, 500);
+                    } else if ($(e.target).attr("class").indexOf("right") > -1) {
+                        toBeVisible = toBeInvisible.next().removeClass("right");
+                        if (toBeVisible.length < 1) {
+                            toBeVisible = root.find(".slider-item").first()
+                                    .css("left", sliderItemWidth * 1.05 + 5)
+                                    .removeClass("left");
+                        } else if (toBeVisible.hasClass("left")) {
+                            toBeVisible.removeClass("left")
+                                    .css("left", sliderItemWidth * 1.05 + 5);
+                        }
+                        toBeInvisible.removeClass("visible").addClass("left")
+                                .stop().animate({
+                            left: -sliderItemWidth * 1.05 + 5
+                        }, 500);
+                    } else {
+                        location.reload();
+                    }
+
+                    toBeVisible.addClass("visible")
+                            .stop().animate({
+                        left: 5
+                    }, 500);
+
+                    toggleCircle(toBeVisible);
+                });
+
+                function toggleCircle(elem) {
+                    $(root.find(".slider-circle").removeClass("visible")[root.find(".slider-item").index(elem)]).addClass("visible");
+                }
+            }
+
+        });
+    </script>
+</section>
+
+<section id="footer">
+    <div class="container">
+        <div class="footer-up">HeXA</div>
+        <div class="footer-down">Powered by WEB DEVELOP TEAM</div>
+    </div>
+</section>
+
+</body>
+</html>

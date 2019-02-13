@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="private, max-age=432000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackers' eXciting Academy - HeXA</title>
+    <script src="lib/js/jquery-2.2.0.min.js"></script>
+    <script src="lib/js/jquery.pjax.js"></script>
+    <script src="js/card-depth.js"></script>
+    <script src="js/hexa.js"></script>
+    <link rel="stylesheet" href="css/hexa.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+<body>
+
+<section id="header" class="header header-down">
+    <div class="container">
+        <div id="header-logo-box">
+            <div class="header-hexa-logo"></div>
+            <span class="header-page-label">HeXA</span>
+        </div>
+        <ul id="header-menu"></ul>
+    </div>
+</section>
+
+<section id="content-body">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/about.css">
+    <!-- Page Content -->
+    <div id="content" class="animation content-open animation-duration-4">
+        <div id="about">
+            <div class="container">
+                <div class="about_box_left">
+                    <div>WHAT<br>WE<br>DO</div>
+                    <div class="about_underline"></div>
+                </div>
+                <div class="about_box_right">
+                    HeXA는 2011년부터 시작된 UNIST의 유일한 컴퓨터 연구개발/해킹
+                    동아리입니다. 시스템,
+                    해킹, 개발 등 폭넓은 분야의 스터디와 내부세미나를 진행하며, 이뿐만 아니라 공개강의 개최, 교외 컨퍼런스/대회참가, 교내 보안취약점 분석등 다양한 대외 활동을 하고
+                    있습니다.
+                </div>
+            </div>
+        </div>
+        <div id="department">
+            <div class="container">
+                <div id="department-header">
+                    <p class="section-title">Department</p>
+                    <p class="section-description">More about what we do and how to study programming</p>
+                </div>
+                <div id="department-content">
+                    <!--<div class="department-card">
+                        <div id="study-logo" class="department-logo"></div>
+                        <span class="department-label">Study</span>
+                        <span class="department-context">
+                            프로그래밍을 처음 접하는<br>
+                            신입생들을 위한 부서입니다.<br>
+                            한 학기 동안 멘토/멘티제를 통해<br>
+                            C++과 기본적인 코딩 기법을 배우며,<br>
+                            시험기간 마다 EP1 공개강의를 진행합니다.
+                        </span>
+                    </div>-->
+                    <div class="department-card">
+                        <div id="develop-logo" class="department-logo"></div>
+                        <span class="department-label">Develop</span>
+                        <span class="department-context">
+                            모바일/웹/게임 등의 다양한 분야의<br>
+                            프로그램제작과 스터디를 하는 부서입니다.<br>
+                            현재 게임개발, 게임카피,<br>
+                            안드로이드, 웹개발 팀이 있으며,<br>
+                            이외에도 자유롭게 팀을 만들어<br>
+                            활동 할 수 있습니다.
+                        </span>
+                    </div>
+                    <div class="department-card">
+                        <div id="hacking-logo" class="department-logo"></div>
+                        <span class="department-label">Hacking</span>
+                        <span class="department-context">
+                            해킹 스터디/대회 참여,<br>
+                            주최 등을 하는 부서입니다.<br>
+                            입문자를 위한 포렌식,<br>
+                            시스템, 웹 해킹 등을 다루는<br>
+                            스터디를 운영하고,<br>
+                            국내외 온/오프라인에서 열리는<br>
+                            다양한 해킹대회에 참여하고 있습니다.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="history">
+            <div class="container">
+                <div class="row history-header">
+                    <div class="section-title">History</div>
+                    <div class="section-description">What we did till now</div>
+                </div>
+                <!-- 2017 -->
+                <div class="row history-content">
+                    <div class="history-left">Dec 2017</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">2017 암호경진대회 대상 (김승회, 김동민, 장동원)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Nov 2017</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">HeXA 공개세미나 (이재성, 곽희나, 김승호)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Sep 2017</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">카카오 Code Festival Finalist (김승호)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Aug 2017</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">딥러닝기반 강아지고양이 이미지인식 경진대회 대상 (이재성)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Mar 2017</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">부회장 김연준</div>
+                </div>
+                <!-- 2016 -->
+                <div class="row history-content">
+                    <div class="history-left">Nov 2016</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">Power of XX 2016 Finalist (오정민, 이지향, 최지수, 오민선)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Sep 2016</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">"CODE IT, SOLVE IT" 제 2회 헥사톤 (HeXATHON) (NAVER D2 후원)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Apr 2016</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">HeXA 해킹세미나 (김동민, 김승회, 문혜진)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Jan 2016</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">회장 김동민, 부회장 김대화</div>
+                </div>
+                <!-- 2015 -->
+                <div class="row history-content">
+                    <div class="history-left">May 2015</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">HeXA 해킹세미나 (황원준, 오정민, 이송이, 이시몬, 한명균)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">May 2015</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right"> “기술, 스타트업, 성공적” 제 1회 헥사톤 (HeXATHON) (NAVER D2 후원)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Mar 2015</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">회장 김유창, 부회장 곽희나</div>
+                </div>
+                <!-- 2014 -->
+                <div class="row history-content">
+                    <div class="history-left">Mar 2014</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">회장 한명균, 부회장 김기철</div>
+                </div>
+                <!-- 2013 -->
+                <div class="row history-content">
+                    <div class="history-left">Nov 2013</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">재학생 대상 제 4회 C++ 공개 강의</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Sep 2013</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">화이트햇 콘테스트 일반부 우수상 수상 (김태훈, 조재민, 김승회, 한충우)</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Sep 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">재학생 대상 제 3회 C++ 공개 강의</div>
+                </div>
+
+
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Sep 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">UNIST 재학생 대상 제 1회 C++ 튜터링</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Sep 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">UNIST 정규동아리 등록</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Sep 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">제 1회 HeXA CTF</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Sep 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">부회장 김민규</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">May 2013</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">재학생 대상 제 2회 C++ 공개 강의</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">May 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right"> UNIST 메일 시스템 취약점 발견 및 보고</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Mar 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">4기 모집</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Mar 2013</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">회장 정의진 부회장 유인완</div>
+                </div>
+                <!-- 2012 -->
+                <div class="row history-content">
+                    <div class="history-left">Dec 2012</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">UNIST 출석체크 시스템 취약점 발견 및 보고</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Dec 2012</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">3기 모집</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Nov 2012</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">재학생 대상 제 1회 c++ 공개 강의</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Sep 2012</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">회장 김태훈</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left">Mar 2012</div>
+                    <div class="history-circle"></div>
+                    <div class="history-right">회장 곽재원, 부회장 한충우</div>
+                </div>
+                <!-- 2011 -->
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Mar 2011</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">초대회장 고건일, 초대부회장 곽재원</div>
+                </div>
+                <div class="row history-content">
+                    <div class="history-left history-hidden">Mar 2011</div>
+                    <div class="history-circle history-hidden"></div>
+                    <div class="history-right">동아리 창립</div>
+                </div>
+                <div id="history-line"></div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <p class="section-title">Contact</p>
+                <a id="facebook" class="link" href="https://www.facebook.com/unist.hexa"
+                   target="_blank" title="HeXA Facebook"></a>
+                <a id="github" class="link" href="http://hexa-unist.github.io/"
+                   target="_blank" title="HeXA github"></a>
+            </div>
+        </div>
+    </div>
+    <!-- Page specific scripts -->
+    <script>
+        setTitle('About');
+        registerHeaderMenu(".about_box_left");
+        // onLoad Function
+        $(function () {
+            $("#header.header").addClass("header-down");
+        });
+    </script>
+</section>
+
+<section id="footer">
+    <div class="container">
+        <div class="footer-up">HeXA</div>
+        <div class="footer-down">Powered by WEB DEVELOP TEAM</div>
+    </div>
+</section>
+
+</body>
+</html>

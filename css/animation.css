@@ -1,0 +1,124 @@
+.animation {
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    -o-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes intro {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes intro {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes menu-hover {
+    100% {
+        opacity: .9
+    }
+}
+
+@-webkit-keyframes menu-hover {
+    100% {
+        opacity: .9
+    }
+}
+
+.content-open {
+    -webkit-animation-name: content-open;
+    -moz-animation-name: content-open;
+    -o-animation-name: content-open;
+    animation-name: content-open;
+}
+
+@keyframes content-open {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes content-open {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.content-close {
+    -webkit-animation-name: content-close;
+    -moz-animation-name: content-close;
+    -o-animation-name: content-close;
+    animation-name: content-close;
+}
+
+@keyframes content-close {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes content-close {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes float-nav-showup {
+    0% {
+        right: -150px
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@-webkit-keyframes float-nav-showup {
+    0% {
+        right: -150px
+    }
+    100% {
+        right: 0;
+    }
+}
